@@ -24,7 +24,7 @@
       <!-- Right -->
       <ul class="navbar-nav ms-auto">
 
-        <% if ($c->can('current_user')) { %>
+        <% if (is_user_authenticated) { %>
 
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle"
