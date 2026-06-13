@@ -1,7 +1,5 @@
 {
     "Home": "Home",
     "Account": "Account",
-    "Profile": "Profile",
-    "Logout": "Logout",
-    "Login": "Login"
+    "Profile": "Profile"
 }
