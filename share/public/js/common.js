@@ -88,32 +88,18 @@ function build_btn( title, classe, style ) {
     return btn;
 }
 
-function loadBoutonAction( items, addthis = '' ) {
-    var btn_actions =  '<div class="nowrap">';
-
-    if ( items ){
-        for ( var i=0; i < items.length; i++ ){
-
-            droit = items[i].droit;
-            title = items[i].title;
-            classe = items[i].classe;
-            style = items[i].style;
-            //console.log(items, droit);
-
-            btn = '';
-            // if ( droit ){
-            //     if ( droits[droit] ) {
-            //         btn = build_btn(title, classe, style);
-            //     }
-            // }
-            // else{
-                btn = build_btn(title, classe, style);
-            // }
-            btn_actions = btn_actions + btn + '&nbsp;';
+// Permission-aware action button renderer
+function renderActions( items, addthis ) {
+    var html = '<div class="nowrap">';
+    if ( items ) {
+        for ( var i = 0; i < items.length; i++ ) {
+            var show = true;
+            if ( items[i].perm  ) show = show && fondationCheckPerm(items[i].perm);
+            if ( items[i].group ) show = show && fondationCheckGroup(items[i].group);
+            if ( show ) {
+                html += build_btn(items[i].title, items[i].classe, items[i].style) + '&nbsp;';
+            }
         }
     }
-
-    btn_actions = btn_actions + addthis + '</div>';
-
-    return btn_actions;
+    return html + (addthis || '') + '</div>';
 }

@@ -12,6 +12,7 @@
 
     %= asset 'app.css'
     %== i18n_js
+    %== render_zone 'head/auth'
 
   </head>
 
