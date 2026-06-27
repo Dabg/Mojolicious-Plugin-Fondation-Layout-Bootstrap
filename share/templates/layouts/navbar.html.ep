@@ -19,20 +19,20 @@
           </a>
 
         </li>
-        % if ($c->has_helper('render_menu_navbar')) {
-          %== $c->render_menu_navbar('left_menu')
+        % if ($c->has_helper('render_menu')) {
+          %== $c->render_menu('left_menu')
         % }
       </ul>
 
       <!-- Right -->
       <ul class="navbar-nav ms-auto">
 
-        % if ($c->has_helper('render_menu_navbar')) {
-          %== $c->render_menu_navbar('admin_menu')
+        % if ($c->has_helper('render_menu')) {
+          %== $c->render_menu('admin_menu')
         % }
 
-        % if ($c->has_helper('render_menu_navbar')) {
-          %== $c->render_menu_navbar('account_menu')
+        % if ($c->has_helper('render_menu')) {
+          %== $c->render_menu('account_menu')
         % }
 
       </ul>
