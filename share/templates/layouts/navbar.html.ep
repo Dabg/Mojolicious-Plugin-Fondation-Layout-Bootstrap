@@ -19,49 +19,21 @@
           </a>
 
         </li>
+        % if ($c->has_helper('render_menu_navbar')) {
+          %== $c->render_menu_navbar('left_menu')
+        % }
       </ul>
 
       <!-- Right -->
       <ul class="navbar-nav ms-auto">
 
-        <% if (is_user_authenticated) { %>
+        % if ($c->has_helper('render_menu_navbar')) {
+          %== $c->render_menu_navbar('admin_menu')
+        % }
 
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle"
-             href="#"
-             id="navbarDropdown"
-             role="button"
-             data-bs-toggle="dropdown">
-
-            <%= $c->current_user->{name} || l('Account') %>
-          </a>
-
-          <ul class="dropdown-menu dropdown-menu-end">
-            <li>
-              <a class="dropdown-item" href="/user_profile">
-                <%= l 'Profile' %>
-              </a>
-            </li>
-
-            <li><hr class="dropdown-divider"></li>
-
-            <li>
-              <a class="dropdown-item"
-                 href="/logout"
-                 onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                <%= l 'Logout' %>
-              </a>
-            </li>
-          </ul>
-
-          <form id="logout-form" action="/logout" method="GET" class="d-none"></form>
-        </li>
-        <% } else { %>
-        <li class="nav-item">
-          <a class="nav-link" href="/login"><%= l 'Login' %></a>
-        </li>
-
-        <% } %>
+        % if ($c->has_helper('render_menu_navbar')) {
+          %== $c->render_menu_navbar('account_menu')
+        % }
 
       </ul>
 

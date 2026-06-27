@@ -1,5 +1,7 @@
 {
-    "Home": "Accueil",
-    "Account": "Compte",
-    "Profile": "Profil"
+  "Home": "Accueil",
+  "Account": "Compte",
+  "Profile": "Profil",
+  "Logout": "Déconnexion",
+  "Login": "Connexion"
 }
