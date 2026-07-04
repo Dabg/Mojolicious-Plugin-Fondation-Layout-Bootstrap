@@ -32,6 +32,10 @@
         % }
 
         % if ($c->has_helper('render_menu')) {
+          %== $c->render_menu('devel_menu')
+        % }
+
+        % if ($c->has_helper('render_menu')) {
           %== $c->render_menu('account_menu')
         % }
 
