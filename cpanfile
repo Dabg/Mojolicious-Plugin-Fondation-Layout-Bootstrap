@@ -1,4 +1,9 @@
-requires 'Mojolicious' => '9.46';
+# Minimum Perl version required (for Mojolicious signatures feature)
+requires 'perl' => '5.026';
+
+# Runtime dependencies
+requires 'Mojolicious'                       => '9.46';
+requires 'Mojolicious::Plugin::Fondation'    => '0.01';
 
 on 'test' => sub {
     requires 'Test::More' => '1.302190';
