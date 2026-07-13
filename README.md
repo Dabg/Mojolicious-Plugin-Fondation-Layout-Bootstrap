@@ -4,7 +4,7 @@ Mojolicious::Plugin::Fondation::Layout::Bootstrap - Simple layout plugin for Fon
 
 # VERSION
 
-version 0.01
+version 0.03
 
 # AUTHOR
 
