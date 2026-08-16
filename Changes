@@ -1,6 +1,8 @@
 Revision history for Mojolicious-Plugin-Fondation-Layout-Bootstrap
 
 {{$NEXT}}
+
+0.05      2026-08-16 19:57:13+02:00 Europe/Paris
   - Add t/00-load.t
   - add render_zone 'head/css'
   - test render_zone
